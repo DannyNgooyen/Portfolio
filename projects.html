@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danny Nguyen - Privacy Focused Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="projects-sub-header">
+        <nav>
+            <a href="index.html"><img src="images/pizza bear.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="papers.html">PAPERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="lab.html">LAB</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Personal Projects</h1>
+
+</section>
+
+<!---- Projects --->
+
+<section class="projects-page">
+    
+    <div class="project-card">
+        <div class="text-content">
+            <h1>112 Project</h1>
+            <p> In my first major project for CMU's 15-112 course, I tried to create a Python game that combines strategic decision-making with social dynamics. 
+                It's a turn-based game where the player can make decisions, affecting their karma score and relationships. 
+                The goal is to make as many relationships as possible that are similar to your karma score in a set amount of days. 
+                The mechanics itself are simple, but the complexity comes from implementing Tarjan's Strongly Connected Components algorithm. 
+                This algorithm is meant to keep track of the mentioned relationships and dynamically adjust throughout rounds to determine the player's success. 
+                One of the major focuses was ensuring a clean and simple user interface for ease of play. </p>
+        </div>
+        <img src="images/112 Term Project.png">
+    </div>
+
+    <div class="project-card">
+        <div class="text-content">
+            <h1>Stonks</h1>
+            <p>This is my ongoing playground for experimenting with different machine 
+                learning techniques and statistical models. I chose stocks as they seem to be the most well-maintained and researched dataset of all time.
+               The main results so far have been a prediction model based on statistical testing on simulated datasets. 
+               The specific simulation uses Geometric Brownian Motion and Jump Diffusion, which both incorporate historical stock data with some assumptions about stock volatility and drift. 
+               A sample of an example stock simulation dataset is shown on the right.
+               While this was a fun start, there are still many other potential ideas to explore to better understand market trends. 
+               Future plans will involve experimenting with some text analysis on news headlines, using CNN's Greed/Fear Index, and trying out Perceptron. 
+            </p>
+        </div>
+           <img src="images/stock-graph.png">
+    </div>    
+
+</section>
+  
+
+<!---- Footer --->
+<section class="footer">
+    <h4>Contact Me</h4>
+    <p>EMAIL: dannynewyen@proton.me <br>
+       TEXT: (337) 806-4120 </p>
+</section>
+
+
+<!--Javascript to Toggle Menu----->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    } 
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    } 
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danny Nguyen - Privacy Focused Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="lab-sub-header">
+        <nav>
+            <a href="index.html"><img src="images/pizza bear.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="papers.html">PAPERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="lab.html">LAB</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <h1>Lab</h1>
+        <h2>Things are always being worked on!</h2>
+
+</section>
+
+<!---- Lab--->
+
+<!---- Cooking Up --->
+<section class="cooking-page">
+    <div class="content-wrapper">
+        <div class="text-section">
+            <h1>Projects Cooking Up</h1>
+            <p> 
+                * Social impact project scoring algorithm for TCUS <br> 
+                * Lawyer-based simulator game <br>
+                * Web extension based on privacy or fun interactions <br>
+                * Data simulations using Preswald 
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="images/alechemy-lab.jpg" alt="Lab Image">
+        </div>
+    </div>
+</section>
+
+<!---- Leveling Up ---->
+<section class="leveling-page">
+    <div class="content-wrapper">
+        <div class="text-section">
+            <h1>Leveling Up</h1>
+            <p> 
+                * FINISHED: Reading Law 101 by Feinman. <br>
+                * TO DO: Gain an introductory understanding of Econometrics. <br>
+                * TO DO: Gain an introductory understanding of Psychometrics. <br>
+                * TO DO: Practice some data journalism articles about privacy and tech industry
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="images/law-image.jpg" alt="Law Image">
+        </div>
+    </div>
+</section>
+
+
+<!---- Footer --->
+<section class="footer">
+    <h4>Contact Me</h4>
+    <p>EMAIL: dannynewyen@proton.me <br>
+       TEXT: (337) 806-4120 </p>
+</section>
+
+
+<!--Javascript to Toggle Menu----->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    } 
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    } 
+</script>
+
+</body>
+</html>
+

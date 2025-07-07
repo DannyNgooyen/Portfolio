@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danny Nguyen - Privacy Focused Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="about-sub-header">
+        <nav>
+            <a href="index.html"><img src="images/pizza bear.png"></a>
+            <div class="nav-links" id="navLinks">
+                
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="papers.html">PAPERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="lab.html">LAB</a></li>
+                </ul>
+            </div>
+                
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        
+        </nav>
+
+        <h1>About Me</h1>
+
+    </section>
+
+<!---- About Me --->
+
+<section class="about-me"> 
+    <div class="row">
+        <dive class="about-col">
+            <h1> Who Exactly Am I? </h1>
+            <p>I am simply someone who wants to advocate for privacy for everyone.
+               This whole passion of mine started from one project in high school, and the rest is history.
+               I'll admit that it is a bit of a weird for someone like me to major in Statistics and Machine Learning.
+               I see that stopping these invasive practices as impossible, so what can be done to preserve privacy under them?
+               My entire desire to learn about Statistics and Machine Learning was to see if privacy could coexist. 
+               I want to protect privacy for everyone, because that's how highly I value my own.   </p>
+        </div>
+
+        <dive class="about-image">
+            <div class="overlay" id="overlay"></div>
+            <img src="images/me.jpg" alt="Hidden Image">
+        </div>
+    
+    <!-- Input Box for the Password -->
+    <div class="password-section">
+        <label for="password">Secret Image with a Code <br> </label>
+        <input type="text" id="password" placeholder="Enter code here...">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div class="error-message" id="error-message"></div>
+
+    </div>
+</section>
+
+
+<!---- Footer --->
+<section class="footer">
+    <h4>Contact Me</h4>
+    <p>EMAIL: dannynewyen@proton.me <br>
+       TEXT: (337) 806-4120 </p>
+</section>
+
+
+<!--Javascript to Toggle Menu----->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    } 
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    } 
+</script>
+
+<script>
+    function checkPassword() {
+        const password = document.getElementById("password").value;
+        const overlay = document.getElementById("overlay");
+        const messageContainer = document.getElementById("error-message");
+
+        // Set password here
+        const secretCode = "possumsareawesome";
+
+        if (password === secretCode) {
+            overlay.style.opacity = "0";
+        } else {
+            overlay.style.opacity = "1";
+            messageContainer.style.display = "block"; // Make the error message visible
+            messageContainer.innerText = "Incorrect code, please try again."; // Set the error message text
+
+            // Hide the error message after 2.5 seconds (timeout is done in milliseconds)
+            setTimeout(() => { messageContainer.style.display = "none";}, 2500);
+        }
+    }
+</script>
+
+
+</body>
+</html>
+

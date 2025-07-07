@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danny Nguyen - Privacy Focused Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="papers-sub-header">
+        <nav>
+            <a href="index.html"><img src="images/pizza bear.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="papers.html">PAPERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="lab.html">LAB</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Academic Papers</h1>
+
+</section>
+
+<!---- Papers --->
+
+<section class="papers-page">
+    
+    <h2>Original Research Projects</h2>
+
+    <div class="papers-grid">
+      <div class="paper-card">
+        <h3>Privacy Policy, Law, and Technology Paper</h3>
+        <p>
+          This was a collaborative research paper reporting both the objective accuracy of the data on Google profiles and the subjective perception of the users. 
+          This research project was funded through a small university grant and followed proper research ethical guidelines. 
+          This experience was a great learning opportunity into the care put for academic research.
+          Key results show high levels of accuracy for demographic data with more varying accuracy for ad marketing data.
+          Many users both simaltaneously believe that the data collected for personalized ads is concerning for privacy, but also relevant to their interests.
+          Overall, this result highlights the common "Privacy Paradox" trend shown in other user behavior studies.
+        </p>
+        <a href="files/PPLT_Paper.pdf" target="_blank" class="btn">Read Paper</a>
+      </div>
+      
+      <div class="paper-card">
+        <h3>Privacy Policy Text Analysis</h3>
+        <p>
+          This was an independent project focusing on text analysis of privacy policies on the basis of their readability. 
+          Readability was determined by how easy it is to comprehend the text based on the Flesch Ease score.
+          Key findings included an overwhelming number of difficult privacy policies compared to easier ones and the difference in language used.
+          Easier privacy policies typically use more direct pronouns to refer to people and used simple action words to refer to choices.
+          Harder privacy policies typically used numerous and varied legal terms to refer to people or ideas.
+          The results could be used to design better privacy policies for the public, as it is intended.
+        </p>
+        <a href="files/Text Analysis Final_Project.pdf" target="_blank" class="btn">Read Paper</a>
+      </div>
+
+      <div class="paper-card">
+        <h3>High School AP Research: Privacy Paper</h3>
+        <p>My first independent research project, and the first draft of my never-ending passion for privacy.
+          The purpose of my research was to determine attitudes regarding online privacy from students and faculty at my high school.
+          The results demonstrated a general concern for privacy yet limitations taken to protect privacy beyond strong passwords such as web extensions or VPNs.
+          This paper was very amateur and could use a lot of improvement, but it highlights the important starting point that I had with my passion for privacy and research skills.
+          It was a formative experience for me and deserves that acknowledgement here.
+        </p>
+        <a href="files/APR- Data Privacy .pdf" target="_blank" class="btn">Read Paper</a>
+      </div>
+    </div>
+
+    <h2>Academic Writing</h2>
+
+    <div class="papers-grid">
+      <div class="paper-card">
+        <h3>Data Property Rights</h3>
+        <p>This was an argumentative paper in favor of data property rights, which I still personally struggle with fully supporting.
+           My motivation for writing this was to challenge how far I would support data proprty rights.
+           They do represent something tangible for people to gain, and it would lead to a greater acknowledgement of privacy.
+           Additionally, it allows of economic empowerment, which is only becoming a bigger issue in modern times.
+           It would be challenge to implement, but this paper does explore some possible avenues.
+        </p>
+        <a href="files/19-654_ Data Property Rights.pdf" target="_blank" class="btn">Read Paper</a>
+      </div>
+      
+      <div class="paper-card">
+        <h3>Political Philosophy: Critique of Paternalism</h3>
+        <p>A messy argument done against Paternalism. 
+          This paper perfectly represents my love for privacy through disdain for authority.
+          It argues that a paternal state requires some surveillance to determine "what's best".
+          Surveillance itself alters behaviors, and people deserve privacy to preserve behaviors under freedom.
+          Paternalism still allows for freedom and choices, but the state has undue influence over them.
+          Despite its many flaws, I proudly think this paper represents something special to me.
+        </p>
+        <a href="files/80-135_ Essay 2.pdf" target="_blank" class="btn">Read Paper</a>
+      </div>
+    
+      <div class="paper-card">
+        <h3>Musashi and Better Masculinity</h3>
+        <p>This was a really unique paper that what I've written before. It is a social analysis of the manga, "Vagabond". 
+          It explores how Musashi and many of the other male characters struggle to understand strength and emotion. 
+          Throughout the narrative, Musashi undergoes a path of violence and engages with men of the same mindset.
+          The paper explores the core themes of how Musashi is able to grow beyond this initial state into a more introspective and kind man.
+          Definitely not my best work, but I enjoyed writing about something different here.
+        </p>
+        <a href="files/Sex and Texts Final Project.docx" target="_blank" class="btn">Read Paper</a>
+      </div>
+    </div>
+
+
+
+  
+    </section>
+  
+
+
+<!---- Footer --->
+<section class="footer">
+  <h4>Contact Me</h4>
+  <p>EMAIL: dannynewyen@proton.me <br>
+     TEXT: (337) 806-4120 </p>
+</section>
+
+
+<!--Javascript to Toggle Menu----->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    } 
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    } 
+</script>
+
+</body>
+</html>
+

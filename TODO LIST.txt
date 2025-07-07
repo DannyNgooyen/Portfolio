@@ -1,0 +1,3 @@
+- Differentiate between light and dark modes
+- Update the content (new project)
+- Add a button in the footer to swap between light and dark modes
