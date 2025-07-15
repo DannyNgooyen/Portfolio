@@ -11,26 +11,60 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "width" 100;
+}
 
-    /* colors */
+:root{
+    /* possum colors as default */
     --shadow: rgba(4, 9, 30, 0.70);
-    --box-shadow: rgba(0, 0, 0, 0.3);
+    --box-shadow: rgba(0, 0, 0, 0.8);
     --hiding: #000;
 
-    --background: #f44336;
-    --background-transparent: rgba(226, 0, 0, 0.7);
-    --p-text: #f44336;
-    --h3-text: red;
-    --h1-text: #fff3f3;
+    --background: #3d3b3c;
+    --background-transparent: rgb(95, 91, 107, 0.7);;
+    --footer-background: #323031;
+    
+    --p-text: #c1bdb3;
+    --h3-text: #c1bdb3;
+    --h1-text: #5f5b6b;
 
-    --links: #fff;
-    --text-box: #fff3f3;
-    --button: #007bff;
-    --button-hover: #0056b3;
-    --button-text: #000;
+    --links-hover: #7f7979;
+    --links-text: #c1bdb3;
+    --text-box: #7f7979;
+    
+    --button: #c1bdb3;
+    --button-hover: #5f5b6b;
+    --button-text: #323031;
 
     --error-text: red;
     --border: #ccc;
+}
+
+body{
+    background-color: var(--background);
+}
+
+.fa-paint-brush {
+    color: var(--button-text);
+}
+
+.theme-toggle-btn {
+    background-color: var(--button);
+    border-radius: 50%;
+    width: 35px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 20px;
+
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--button-hover);
 }
 
 .header{
@@ -40,6 +74,10 @@
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+.header h1{
+    color: var(--p-text);
 }
 
 nav{
@@ -66,7 +104,7 @@ nav img{
 }
 
 .nav-links ul li a{
-    color: var(--links);
+    color: var(--links-text);
     text-decoration: none;
     font-size: 13px;
 }
@@ -75,7 +113,7 @@ nav img{
     content: "";
     width: 0%;
     height: 2px;
-    background: var(--background);
+    background: var(--links-hover);
     display: block;
     margin: auto;
     transition:  0.5s;
@@ -150,7 +188,7 @@ nav .fa{
     
     nav .fa{
         display: block;
-        color: var(--links);
+        color: var(--links-text);
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
@@ -206,7 +244,7 @@ h3{
 }
 
 .papers-col:hover{
-    box-shadow: 0 0 20px 0px var(--box-shadow);
+    box-shadow: 0 10px 20px 0px var(--box-shadow);
 }
 
 @media(max-width: 700px){
@@ -255,7 +293,7 @@ h3{
 .layer h3{
     width: 100%;
     font-weight: 500;
-    color: var(--links);
+    color: var(--links-hover);
     font-size: 26px;
     bottom: 0;
     left: 50%;
@@ -327,6 +365,11 @@ h3{
     text-align: left;
     background: var(--text-box);
     padding: 20px 5px;
+    transition: 0.5s;
+}
+
+.achievements-col:hover{
+    box-shadow: 0 10px 20px 0px var(--box-shadow);
 }
 
 .achievements p{
@@ -344,12 +387,37 @@ h3{
     width: 100%;
     text-align: center;
     padding: 30px 0;
+    background-color: var(--footer-background);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Add space between the icon and text */
 }
 
 .footer h4{
-    margin-bottom: 5px;
     margin-top: 20px;
     font-weight: 600;
+    color: var(--h3-text);
+}
+
+.footer p{
+    font-weight: 600;
+    color: var(--p-text);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center; /* Vertically center the icon and text */
+    gap: 5px; /* Add space between the icon and text */
+}
+
+.contact-info i{
+    color: var(--button);
+    font-size: 1.2em; /* icon size */
+}
+
+.contact-info:last-child{
+    margin-top: -15px;
 }
 
 /*----------- Papers Page -----------*/
@@ -362,6 +430,10 @@ h3{
     background-size: 100%; 
     text-align: center;
     color: var(--text-box);
+}
+
+.papers-sub-header h1{
+    color: var(--p-text);
 }
 
 .papers-page h2{
@@ -377,7 +449,6 @@ h3{
 }
 
 .paper-card {
-  border: 1px solid var(--border);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px var(--box-shadow);
@@ -414,6 +485,10 @@ h3{
     color: var(--text-box);
 }
 
+.projects-sub-header h1{
+    color: var(--p-text);
+}
+
 .project-card{
     margin: 5%;
     text-align: left;
@@ -421,17 +496,18 @@ h3{
     margin-bottom: 5%;
     background: var(--text-box);
     padding: 20px 5px;
-    box-shadow: 0 4px 6px var(--box-shadow);
+    box-shadow: 0 10px 20px var(--box-shadow);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .project-card .text-content {
     display: flex;
     flex-direction: column; /* Stack the h1 and p vertically */
     gap: 10px; /* Add spacing between h1 and p */
-    flex: 1; /* Allow text content to take up available space */
+    flex: 1 1 50%; /* Allow text content to take up available space */
 }
 
 .project-card p{
@@ -448,6 +524,7 @@ h3{
 }
 
 .project-card img{
+    flex: 1 1 50%;
     width: 45%;
     height: 100%;
     object-fit: cover;
@@ -465,7 +542,7 @@ h3{
     }
 
     .project-card img{
-        width: 100%;
+        width: 80%;
         margin-left: 20px;
     }
 
@@ -481,6 +558,10 @@ h3{
     background-size: cover;
     text-align: center;
     color: var(--text-box);
+}
+
+.about-sub-header h1{
+    color: var(--p-text);
 }
 
 .about-me{
@@ -507,7 +588,6 @@ h3{
     font-size: 1.2rem;
     line-height: 1.8; 
     font-weight: 400;
-    /* color: var(--hiding);  can change text color if specified*/
 }
 
 .about-image {
@@ -609,75 +689,81 @@ button:hover {
     margin-bottom: 40px;
 }
 
-/* Section Styles */
-.cooking-page, .leveling-page {
-    margin-bottom: 50px;
-    padding: 30px;
-    background-color: var(--text-box);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px var(--box-shadow), 0 -4px 6px var(--box-shadow); 
-    text-align: center;
+.lab-sub-header h1{
+    color: var(--p-text);
 }
 
-/* General layout styling */
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 20px;
-}
-
-.text-section {
-    flex-basis: 60%; /* Slightly larger section */
-    padding-right: 20px;
-}
-
-.image-section {
-    flex-basis: 35%; /* Smaller section */
-    text-align: center;
-}
-
-.text-section h1 {
-    margin-bottom: 10px;
-    font-size: 2.5rem;
-}
-
-.text-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.image-section img {
-    width: 100%;
-    height: auto;
+.lab-card{
+    margin: 5%;
+    text-align: left;
     border-radius: 10px;
+    margin-bottom: 5%;
+    background: var(--text-box);
+    padding: 20px 5px;
+    box-shadow: 0 10px 20px var(--box-shadow);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.lab-card .text-content {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and p vertically */
+    gap: 10px; /* Add spacing between h1 and p */
+    width: 50%;
+    flex-basis: 50%;
+}
+
+.lab-card p{
+    padding: 10px; 
+    font-size: 1.2rem;
+    line-height: 1.9; 
+    font-weight: 400;
+}
+
+.lab-card .text-content h1 {
+    margin-left: 0;
+    padding-left: 10px; 
+    text-align: left; 
+}
+
+.lab-card .image-section img{
+    width: 45%;
+    height: auto;
     object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: auto;
 }
 
-.image-section img {
-    box-shadow: 0px 4px 6px var(--box-shadow);
+.lab-card .image-section{
+    flex-basis: 50%;
+    text-align: center;
 }
 
-/* Mobile Layout - Vertical Stack */
-@media(max-width: 700px) {
-    .content-wrapper {
-        flex-direction: column; /* Stacked vertically on mobile */
-        text-align: left;
+.lab-card .image-section img{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: auto;
+}
+
+@media(max-width: 700px){
+    .lab-card{
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
     }
 
-    .text-section {
-        flex-basis: 100%; /* Full width */
-        padding-right: 0;
+    .lab-card .text-content {
+        width: 100%; /* Ensure text content takes full width */
+        padding: 10px; 
     }
-
-    .image-section {
-        flex-basis: 100%; /* Full width */
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .image-section img {
-        width: 100%; /* Image takes full width */
+    
+    .lab-card img{
+        width: 80%;
+        margin-left: 20px;
     }
 }

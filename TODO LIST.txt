@@ -1,3 +1,7 @@
-- Differentiate between light and dark modes
 - Update the content (new project)
-- Add a button in the footer to swap between light and dark modes
+- CHANGE THE PROJECTS PAGE TO BE A SCROLLABLE VERTICAL TIMELINE
+
+OPTIONAL
+- Update Icons to Font Awesome 5 or SVG Repo
+- Update Fonts to something that looks nicer and bolder
+

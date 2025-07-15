@@ -26,10 +26,8 @@
                     <li><a href="lab.html">LAB</a></li>
                 </ul>
             </div>
-            
-            
+                
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        
         
         </nav>
     <div class="text-box">
@@ -147,13 +145,13 @@
         </div>
 
         <div class="projects-col">
-            <img src="images/measuring.jpg">
-            <h3>Social Impact Scoring</h3>
-            <p>Currently working on a scoring algorithm for the non-profit, TCUS. 
-               It's a voluntary project that focuses on using machine learning models to determine urgency of social impact projects, notably enviromental.
+            <img src="images/basketball-captcha.png">
+            <h3>Captcha Code Jam</h3>
+            <p>Submitted two Javascript captchas for the Kitboga 2025 Code Jam. 
+                The objective is to create a believable captcha to waste scammers' time.
+                The first captcha is a simple searching game and the second is basketball.
             </p>
         </div>
-
     </div>
 
 </section>
@@ -180,32 +178,37 @@
         </div>
 
         <div class="achievements-col">
-            <h3>Student Passions</h3>
-            <p>I was able to help some students rethink their ethical values and career goals as a TA.
-               Not a traditional achievement either, but I'm proud of it.
+            <h3>Privacy Commitment</h3>
+            <p>A non-traditional, personal acheivement of de-googling my life.
+                Years spent swapping, tinkering, and installing different FOSS/privacy-fovused replacement
+                to mainstream apps.
             </p>
         </div>
     </div>
 </section>
 
+<!---- Toggle Theme Button --->
+<button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">
+    <i class="fa fa-paint-brush"></i>
+</button>
+
 <!---- Footer --->
 <section class="footer">
     <h4>Contact Me</h4>
-    <p>EMAIL: dannynewyen@proton.me <br>
-       TEXT: (337) 806-4120 </p>
+    
+    <div class="contact-info">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <p>dannynewyen337@proton.me</p>
+    </div>
+
+    <div class="contact-info">
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <p>(337) 806-4120</p>
+    </div>
 </section>
 
-
-<!--Javascript to Toggle Menu----->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    } 
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    } 
-</script>
+<!----- Javascript ----->
+<script src="script.js"></script>
 
 </body>
 </html>

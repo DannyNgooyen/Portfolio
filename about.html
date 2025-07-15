@@ -66,25 +66,28 @@
     </div>
 </section>
 
+<!---- Toggle Theme Button --->
+<button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">
+    <i class="fa fa-paint-brush"></i>
+</button>
 
 <!---- Footer --->
 <section class="footer">
     <h4>Contact Me</h4>
-    <p>EMAIL: dannynewyen@proton.me <br>
-       TEXT: (337) 806-4120 </p>
+    
+    <div class="contact-info">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <p>dannynewyen337@proton.me</p>
+    </div>
+
+    <div class="contact-info">
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <p>(337) 806-4120</p>
+    </div>
 </section>
 
-
-<!--Javascript to Toggle Menu----->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    } 
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    } 
-</script>
+<!----- Password Section ----->
+<script src="script.js"></script>
 
 <script>
     function checkPassword() {
@@ -97,7 +100,9 @@
 
         if (password === secretCode) {
             overlay.style.opacity = "0";
-        } else {
+        } 
+        
+        else {
             overlay.style.opacity = "1";
             messageContainer.style.display = "block"; // Make the error message visible
             messageContainer.innerText = "Incorrect code, please try again."; // Set the error message text
@@ -107,7 +112,6 @@
         }
     }
 </script>
-
 
 </body>
 </html>

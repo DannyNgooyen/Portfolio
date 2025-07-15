@@ -64,25 +64,28 @@
 
 </section>
   
+<!---- Toggle Theme Button --->
+<button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">
+    <i class="fa fa-paint-brush"></i>
+</button>
 
 <!---- Footer --->
 <section class="footer">
     <h4>Contact Me</h4>
-    <p>EMAIL: dannynewyen@proton.me <br>
-       TEXT: (337) 806-4120 </p>
+    
+    <div class="contact-info">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <p>dannynewyen337@proton.me</p>
+    </div>
+
+    <div class="contact-info">
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <p>(337) 806-4120</p>
+    </div>
 </section>
 
-
-<!--Javascript to Toggle Menu----->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    } 
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    } 
-</script>
+<!----- Javascript ----->
+<script src="script.js"></script>
 
 </body>
 </html>
